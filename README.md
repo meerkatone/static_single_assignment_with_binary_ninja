@@ -1,5 +1,8 @@
 # Static-Single-Assignment-with-Binary-Ninja
-Static Single Assignment (SSA) and Binary Ninja
+Static Single Assignment (SSA) with Binary Ninja
+
+YouTube video:
+https://youtu.be/XL0lepxA2L0
 
 Tools:
 - Binary Ninja 4.2 (Commercial) https://binary.ninja/
