@@ -1,0 +1,62 @@
+Instr Index,Address,Instruction,Definitions,Uses
+0,0xb7ec,r6#1 = arg1#0,None,"0xb7fc [4]
+0xb82c [23]"
+1,0xb7f0,r5#1 = arg2#0,None,"0xb84c [19]
+0xb830 [24]
+0xb838 [26]"
+2,0xb7f4,"result#1, mem#1 = 0x9710(arg1#0) @ mem#0",None,None
+3,0xb7f8,result_1#1 = result#1,None,0xb818 [8]
+4,0xb7fc,r3#1 = r6#1 + result#1,None,0xb818 [7]
+5,0xb800,goto 6 @ 0xb818,None,None
+6,0xb818,"r2_1#1 = ϕ(r2#0, r2_1#2)",<SSAVariable: r2_1 version 2> @ 0xb804 [10],0xb84c [17]
+7,0xb818,"r3#2 = ϕ(r3#1, r3#3)","<SSAVariable: r3 version 1> @ 0xb7fc [4]
+<SSAVariable: r3 version 3> @ 0xb804 [11]","0xb804 [10]
+0xb804 [11]
+0xb84c [18]"
+8,0xb818,"result_1#2 = ϕ(result_1#1, result_1#4)","<SSAVariable: result_1 version 1> @ 0xb7f8 [3]
+<SSAVariable: result_1 version 4> @ 0xb810 [15]","0xb818 [9]
+0xb824 [14]
+0xb810 [15]
+0xb828 [22]
+0xb838 [26]
+0xb854 [33]"
+9,0xb818,if (result_1#2 s>= 0) then 10 @ 0xb804 else 13 @ 0xb81c,None,None
+10,0xb804,r2_1#2 = zx.d([r3#2].b @ mem#1),None,"0xb818 [6]
+0xb80c [12]
+0xb84c [17]"
+11,0xb804,r3#3 = r3#2 - 1,None,"0xb818 [7]
+0xb84c [18]
+0xb854 [32]"
+12,0xb80c,if (r2_1#2 == 0x2e) then 14 @ 0xb824 else 15 @ 0xb810,None,None
+13,0xb81c,goto 17 @ 0xb84c,None,None
+14,0xb824,if (result_1#2 == 0) then 21 else 22 @ 0xb828,None,None
+15,0xb810,result_1#4 = result_1#2 - 1,None,0xb818 [8]
+16,0xb810,goto 6 @ 0xb818,None,None
+17,0xb84c,"r2_1#4 = ϕ(r2_1#1, r2_1#2)","<SSAVariable: r2_1 version 1> @ 0xb818 [6]
+<SSAVariable: r2_1 version 2> @ 0xb804 [10]",0xb854 [31]
+18,0xb84c,"r3#4 = ϕ(r3#2, r3#3)","<SSAVariable: r3 version 2> @ 0xb818 [7]
+<SSAVariable: r3 version 3> @ 0xb804 [11]",0xb854 [32]
+19,0xb84c,[r5#1].b = 0 @ mem#1 -> mem#4,None,None
+20,0xb84c,goto 29 @ 0xb854,None,None
+21,0xb824,goto 17 @ 0xb84c,None,None
+22,0xb828,r2_2#3 = result_1#2 + 1,None,"0xb834 [25]
+0xb854 [31]"
+23,0xb82c,r1#1 = r6#1,None,"0xb834 [25]
+0xb854 [30]"
+24,0xb830,r0#2 = r5#1,None,0xb834 [25]
+25,0xb834,"result#3, mem#2 = 0x93e0(r0#2, r1#1, r2_2#3) @ mem#1",None,None
+26,0xb838,r4#3 = r5#1 + result_1#2,None,"0xb840 [27]
+0xb854 [33]"
+27,0xb840,[r4#3 + 1].b = 0 @ mem#2 -> mem#3,None,None
+28,0xb844,goto 29 @ 0xb854,None,None
+29,0xb854,"result#4 = ϕ(result#1, result#3)","<SSAVariable: result version 1> @ 0xb7f4 [2]
+<SSAVariable: result version 3> @ 0xb834 [25]",0xb854 [35]
+30,0xb854,"r1#2 = ϕ(arg2#0, r1#1)",<SSAVariable: r1 version 1> @ 0xb82c [23],None
+31,0xb854,"r2_1#5 = ϕ(r2_2#3, r2_1#4)","<SSAVariable: r2_2 version 3> @ 0xb828 [22]
+<SSAVariable: r2_1 version 4> @ 0xb84c [17]",None
+32,0xb854,"r3#5 = ϕ(r3#3, r3#4)","<SSAVariable: r3 version 3> @ 0xb804 [11]
+<SSAVariable: r3 version 4> @ 0xb84c [18]",None
+33,0xb854,"r4#5 = ϕ(result_1#2, r4#3)","<SSAVariable: result_1 version 2> @ 0xb818 [8]
+<SSAVariable: r4 version 3> @ 0xb838 [26]",None
+34,0xb854,"mem#5 = ϕ(mem#3, mem#4)",None,None
+35,0xb854,return result#4,None,None
