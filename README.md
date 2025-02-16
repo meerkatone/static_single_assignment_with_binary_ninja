@@ -1,7 +1,7 @@
 # Static-Single-Assignment-with-Binary-Ninja
 Static Single Assignment (SSA) with Binary Ninja
 
-YouTube video:
+YouTube Video:
 https://youtu.be/XL0lepxA2L0
 
 Tools:
