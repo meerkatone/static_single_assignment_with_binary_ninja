@@ -16,7 +16,7 @@ Get the Trivision webs binary:
 - rename the binary as needed.
 - open the binary in Binary Ninja and save a bndb.
 
-Extract SSA from Trivision webs using the API and using the Binary Ninja GUI
+Extract SSA from Trivision webs using the API and the Binary Ninja GUI
 
 Within Binary Ninja we can jump to 0xB7E8, and use current_mlil to do the following:
 - Check if the 3rd param to memcpy takes negative range values
