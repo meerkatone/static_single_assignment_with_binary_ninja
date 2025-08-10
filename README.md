@@ -1,4 +1,4 @@
-# Static-Single-Assignment-with-Binary-Ninja
+# Static Single Assignment with Binary Ninja
 Static Single Assignment (SSA) with Binary Ninja
 
 YouTube Video:
