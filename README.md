@@ -8,7 +8,7 @@ Tools:
 - Binary Ninja 4.2 (Commercial) https://binary.ninja/
 
 Get the Trivision webs binary:
-- wget https://github.com/therealsaumil/emux/raw/master/files/emux/TRI227WF/rootfs.tar.bz2
+- wget https://github.com/therealsaumil/emux/raw/refs/heads/master/files/emux/firmware/TRI227WF/rootfs.tar.bz2
 - bzip2 -d ./rootfs.tar.bz2
 - tar -xvf ./rootfs.tar
 - mkdir ./Tenda/BNDB/
